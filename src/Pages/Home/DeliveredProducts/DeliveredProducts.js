@@ -4,7 +4,7 @@ import "./DeliveredProducts.css";
 
 const DeliveredProducts = () => {
   return (
-    <div className="my-5">
+    <div className="my-5 container">
       <h1 className="text-center mb-1">Some Of Our Delivered Products</h1>
       <p className="text-center mb-5">
         We delivered successfully hundred and more products so far. Here you can

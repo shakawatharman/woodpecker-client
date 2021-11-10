@@ -4,13 +4,13 @@ Live Site Link: [Click Here] ()
 
 ## Project Overview
 
-- This is an organization of making your demand true.
+- This is an organization of making your demands true.
 
 - This is our official website. You can find our activities here.
 
 - Handicrafts are considered as one of the oldest traditions of the world. We are working on this.
 
-- We make your products by decorating or carving the wood to fulfil your demand.
+- We make your products by decorating or carving the wood to fulfil your demands.
 
 - We always ensure the quality of our products. 
 

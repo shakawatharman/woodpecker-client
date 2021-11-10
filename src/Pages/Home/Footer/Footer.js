@@ -25,7 +25,7 @@ const Footer = () => {
 
 				   <Nav.Link as={Link} className="text-dark fw-bold" to="/home">Home</Nav.Link>
       <Nav.Link as={Link} className="text-dark fw-bold" to="/destination">Explore</Nav.Link>
-      <Nav.Link as={Link} className="text-dark fw-bold" to="/manageservice">Manage All Orders</Nav.Link>
+      <Nav.Link as={Link} className="text-dark fw-bold" to="/reviews">Reviews</Nav.Link>
 					</div>
 				</div>
 				<div className="col-md-3 mb-4">

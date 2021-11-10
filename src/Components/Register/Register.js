@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import SpecialButton from '../SpecialButton/SpecialButton';
 
 
-const Login = () => {
+const Register = () => {
 
   const [loginData, setLoginData] = useState({});
 
@@ -16,13 +16,18 @@ const Login = () => {
       const newLoginData = {...loginData};
       newLoginData[field] = value;
       setLoginData(newLoginData)
-      // console.log(loginData);
+      console.log(loginData);
   }
+
   const handleLoginSubmit = (e) => {
-    alert('Login button clicked')
-    
+    if (loginData.password !== loginData.password2) {
+        alert('Your password did not match');
+        return
+    }
+    // registerUser(loginData.email, loginData.password, loginData.name, history);
     e.preventDefault();
- }
+}
+
 
     return (
         <div className="container p-5">
@@ -44,10 +49,20 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   {/* <Form.Label>Email address</Form.Label> */}
                   <Form.Control
+                    name="name"
+                    onChange={handleOnChange}
+                    type="text"
+                    placeholder="Enter Your Name"
+                    required
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  {/* <Form.Label>Email address</Form.Label> */}
+                  <Form.Control
                     name="email"
                     onChange={handleOnChange}
                     type="email"
-                    placeholder="Enter Your email"
+                    placeholder="Enter Your Email"
                     required
                   />
                 </Form.Group>
@@ -62,18 +77,28 @@ const Login = () => {
                     required
                   />
                 </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  {/* <Form.Label>Password</Form.Label> */}
+                  <Form.Control
+                    name="password2"
+                    onChange={handleOnChange}
+                    type="password"
+                    placeholder="Retype Your Password"
+                    required
+                  />
+                </Form.Group>
                
     
                 <div className="text-center mt-3">
                   {/* <p className="text-danger">{error}</p> */}
-                  <SpecialButton type="submit">Login</SpecialButton>
+                  <SpecialButton type="submit">Register</SpecialButton>
                   {/* <Button variant="primary" type="submit" size="lg">
-                    Login
+                    Register
                   </Button> */}
                 </div>
               </Form>
               <div className="mt-3 text-center">
-                <Link to="/register">New User? Please Register</Link>
+                <Link to="/login">Already Registered? Please Login</Link>
               </div>
             </div>
           </div>
@@ -82,4 +107,4 @@ const Login = () => {
     };
     
 
-export default Login;
+export default Register;
