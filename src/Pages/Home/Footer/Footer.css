@@ -5,7 +5,7 @@
     background-color: aliceblue;
   }
   .footer-logo img {
-    max-width: 150px;
+    max-width: 120px;
   }
   .footer-link a {
     line-height: 40px;
@@ -14,4 +14,8 @@
   .footer-bottom p {
     margin: 0;
     color: #fff;
+  }
+  .footer-bottom span{
+    color: rgb(209, 105, 7);
+   
   }

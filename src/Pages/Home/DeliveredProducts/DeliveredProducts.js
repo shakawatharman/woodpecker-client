@@ -13,8 +13,6 @@ const DeliveredProducts = () => {
 
       <div className="container">
         <div className="row card-image">
-
-            
           <Card className="p-0 col-md-6">
             <Card.Img src="https://static-01.daraz.com.bd/p/056aee70bc05052467bc2bb13aa03411.jpg" />
           </Card>
@@ -28,14 +26,14 @@ const DeliveredProducts = () => {
 
           <Card className="p-0 col-md-6">
             <Card.Img
-              src="https://cdn.shopify.com/s/files/1/0416/0130/2695/products/50-off-15pcs-set-of-square-plates-cash-on-delivery-free-shipping-455583_grande.jpg?v=1595223809"
+              src=" https://www.chwoodcrafts.com/portfolio/custom-boxes/ch-woodcraft-custom-boxes-2/"
               alt="Card image"
             />
           </Card>
 
           <Card className="p-0 col-md-6">
             <Card.Img
-              src="https://www.chwoodcrafts.com/portfolio/custom-boxes/ch-woodcraft-custom-boxes-2/"
+              src="https://cdn.shopify.com/s/files/1/0416/0130/2695/products/50-off-15pcs-set-of-square-plates-cash-on-delivery-free-shipping-455583_grande.jpg?v=1595223809"
               alt="Card image"
             />
           </Card>

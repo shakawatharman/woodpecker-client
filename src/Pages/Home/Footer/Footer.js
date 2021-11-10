@@ -12,10 +12,10 @@ const Footer = () => {
 				<div className="col-md-5 mb-4">
 					<h3 className="footer-title"></h3>
 					<div className="footer-logo mb-4  text-start">
-						<img className="img-fluid" src="https://cdn11.bigcommerce.com/s-6d1tnboxyx/images/stencil/original/logo4_1550778558__25495.original.png" alt="" />
+						<img className="img-fluid" src="https://woodpeckerbd.com/wp-content/uploads/2021/09/Woodpecker-logo-wc-1.png" alt="" />
 					</div>
 					<div className="footer-meta  text-start">
-						<p>We are offering you the best trip. Feel free to contact us to book your trip with your lovely family.</p>
+						<p>We are offering you the best service.<br /> Don't feel embarrass to contact us. <br /> We will cordially deal with you.</p>
 					</div>
 				</div>
 				
@@ -42,7 +42,7 @@ const Footer = () => {
 			<div className="container p-2">
 				<div className="row justify-content-center">
 					
-					<p className="text-white">© All Rights Reserved by Woodpeckers Crafts || 2021</p>
+					<p className="text-white">©  All Rights Reserved by <span>Woodpecker</span>  | |  2021</p>
 				</div>
 			</div>
 		</div>
