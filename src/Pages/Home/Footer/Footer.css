@@ -1,0 +1,17 @@
+/** 
+** Footer section
+*/
+.footer-area {
+    background-color: aliceblue;
+  }
+  .footer-logo img {
+    max-width: 150px;
+  }
+  .footer-link a {
+    line-height: 40px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: #fff;
+  }
