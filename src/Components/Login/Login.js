@@ -1,12 +1,21 @@
+import { Alert, CircularProgress } from '@mui/material';
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import SpecialButton from '../SpecialButton/SpecialButton';
 
 
 const Login = () => {
 
+  const { user,  loginUser, isLoading, authError } = useAuth();
+
   const [loginData, setLoginData] = useState({});
+
+  const location = useLocation();
+
+  const history = useHistory();
+
 
     
   const handleOnChange = (e) => {
@@ -19,8 +28,7 @@ const Login = () => {
       // console.log(loginData);
   }
   const handleLoginSubmit = (e) => {
-    alert('Login button clicked')
-    
+    loginUser(loginData.email, loginData.password, location, history);
     e.preventDefault();
  }
 
@@ -71,10 +79,15 @@ const Login = () => {
                     Login
                   </Button> */}
                 </div>
-              </Form>
-              <div className="mt-3 text-center">
+
+                <div className="mt-3 text-center">
                 <Link to="/register">New User? Please Register</Link>
               </div>
+                {isLoading && <CircularProgress />}
+                    {user?.email && <Alert severity="success">Login Successful</Alert>}
+                    {authError && <Alert severity="error">{authError}</Alert>}
+              </Form>
+            
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ const FAQ = () => {
     return (
         <div className="row container">
             <h2 className="text-uppercase text-center my-5">frequently asked questions</h2>
-           
+            
             <div className="col-md-6 mt-5">
             <Accordion>
         <AccordionSummary

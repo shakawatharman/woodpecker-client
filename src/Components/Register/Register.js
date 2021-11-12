@@ -1,10 +1,16 @@
+import { Alert, CircularProgress } from '@mui/material';
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import SpecialButton from '../SpecialButton/SpecialButton';
 
 
 const Register = () => {
+
+  const {user, registerUser, isLoading, authError} = useAuth()
+
+  const history = useHistory();
 
   const [loginData, setLoginData] = useState({});
 
@@ -24,7 +30,7 @@ const Register = () => {
         alert('Your password did not match');
         return
     }
-    // registerUser(loginData.email, loginData.password, loginData.name, history);
+    registerUser(loginData.email, loginData.password, loginData.name, history);
     e.preventDefault();
 }
 
@@ -37,8 +43,10 @@ const Register = () => {
             </div>
     
             <div className="col-md-6 col-sm-12 shadow p-3">
+          
+            { !isLoading &&
               <Form onSubmit={handleLoginSubmit} className="my-5">
-                {/* <h2 className="mb-5 text-primary text-center">Log<span className="bg-primary text-white">in</span></h2> */}
+                
                 <div>
                     <img className="w-25 mb-5" src="https://woodpeckerbd.com/wp-content/uploads/2021/09/Woodpecker-logo-wc-1.png" alt="" />
                 </div>
@@ -96,10 +104,16 @@ const Register = () => {
                     Register
                   </Button> */}
                 </div>
-              </Form>
-              <div className="mt-3 text-center">
+                <div className="mt-3 text-center">
                 <Link to="/login">Already Registered? Please Login</Link>
               </div>
+              </Form>
+           }
+
+              {isLoading && <CircularProgress />}
+                     {user?.email && <Alert severity="success">User Created Successfully!</Alert>}
+                     {authError && <Alert severity="error">{authError}</Alert>}
+              
             </div>
           </div>
         </div>

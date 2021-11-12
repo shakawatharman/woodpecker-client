@@ -1,0 +1,17 @@
+.event-form input,.event-form textarea,.event-form button {
+	width: 100%;
+	display: block;
+	border: 1px solid #dddddd7d;
+	padding: 10px;
+	outline: none;
+	border-radius: 5px;
+}
+.event-form button{
+	background-color: #2a06f6a4;
+    color:white;
+	width: 220px;
+}
+.event-form label{
+    display: block;
+   text-align: left;
+}
