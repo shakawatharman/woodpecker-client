@@ -24,14 +24,14 @@ const Footer = () => {
 					<div className="footer-link">
 
 				   <Nav.Link as={Link} className="text-dark fw-bold" to="/home">Home</Nav.Link>
-      <Nav.Link as={Link} className="text-dark fw-bold" to="/destination">Explore</Nav.Link>
-      <Nav.Link as={Link} className="text-dark fw-bold" to="/reviews">Reviews</Nav.Link>
+      <Nav.Link as={Link} className="text-dark fw-bold" to="/allproducts">Explore</Nav.Link>
+      <Nav.Link as={Link} className="text-dark fw-bold" to="/addreview">Reviews</Nav.Link>
 					</div>
 				</div>
 				<div className="col-md-3 mb-4">
 					<h3 className="footer-title text-start">Contact Us</h3>
 					<div className="contact-info text-start">
-						<p>Phone : +88 018 1932015</p>
+						<p>Phone : +88 01818000000</p>
 						<p>Email : woodpeckers.crafts@gmail.com</p>
 						<p>Address : Chattogram,Bangladesh</p>
 					</div>

@@ -5,12 +5,15 @@ import Login from "./Components/Login/Login";
 import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 import Register from "./Components/Register/Register";
 import AuthProvider from "./Context/AuthProvider";
-import AllProducts from "./Pages/AllProducts/AllProducts";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import Home from './Pages/Home/Home/Home';
 import Payment from "./Pages/Payment/Payment";
 import NotFound from "./Pages/NotFound/NotFound";
 import AddProduct from "./Pages/AddProduct/AddProduct";
+import AddReview from "./Pages/AddReview/AddReview";
+import Products from "./Pages/Products/Products";
+import AllProducts from "./Pages/AllProducts/AllProducts";
+import PurchaseForm from "./Pages/PurchaseForm/PurchaseForm";
 
 function App() {
   return (
@@ -33,17 +36,27 @@ function App() {
         <Route path="/register">
         <Register></Register>
         </Route>
+        <Route path="/products">
+        <Products></Products>
+        </Route>
+        <Route path="/allproducts">
+        <AllProducts></AllProducts>
+        </Route>
         <PrivateRoute path="/dashboard">
         <Dashboard></Dashboard>
         </PrivateRoute>
         <PrivateRoute path="/payment">
         <Payment></Payment>
         </PrivateRoute>
-        <PrivateRoute path="/allproducts">
-        <AllProducts></AllProducts>
+        
+        <PrivateRoute path="/purchaseform">
+        <PurchaseForm></PurchaseForm>
         </PrivateRoute>
         <PrivateRoute path="/addproduct">
         <AddProduct></AddProduct>
+        </PrivateRoute>
+        <PrivateRoute path="/addreview">
+        <AddReview></AddReview>
         </PrivateRoute>
         <Route path="*">
         <NotFound></NotFound>

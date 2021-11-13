@@ -52,6 +52,13 @@ const Navigation = () => {
                 <Nav.Link
                   as={Link}
                   className="text-dark fw-bold"
+                  to="/addreview"
+                >
+                  Add Review
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  className="text-dark fw-bold"
                   to="/myorders"
                 >
                   My Orders

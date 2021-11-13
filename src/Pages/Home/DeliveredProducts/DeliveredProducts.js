@@ -5,7 +5,7 @@ import "./DeliveredProducts.css";
 const DeliveredProducts = () => {
   return (
     <div className="my-5 container">
-      <h2 className="text-center mb-1">Some Of Our Delivered Products</h2>
+      <h2 className="text-center mb-1 text-uppercase">Some Of Our Delivered Products</h2>
       <p className="text-center mb-5">
         We delivered successfully hundred and more products so far. Here you can
         see some of our work.

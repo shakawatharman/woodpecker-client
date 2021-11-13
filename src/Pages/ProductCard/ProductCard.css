@@ -1,0 +1,8 @@
+.img-parent {
+    max-height: 250px;
+}
+
+.img-parent img {
+    object-fit: cover;
+    height: 250px;
+}

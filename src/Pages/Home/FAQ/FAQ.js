@@ -8,10 +8,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const FAQ = () => {
     return (
-        <div className="row container">
+        <div className=" container row">
             <h2 className="text-uppercase text-center my-5">frequently asked questions</h2>
             
-            <div className="col-md-6 mt-5">
+            <div className="col-md-6 mt-5 py-3">
             <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -68,10 +68,24 @@ const FAQ = () => {
             </Typography>
         </AccordionDetails>
       </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3a-content"
+          id="panel3a-header"
+        >
+          <Typography className="fw-bold">How can I contact with you?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+           You can check our website. We mentioned our contact information in the lower section. Besides you can visit physically and see our shop. 
+            </Typography>
+        </AccordionDetails>
+      </Accordion>
             </div>
 
             <div className="col-md-6">
-                <img src="https://media.istockphoto.com/vectors/vector-illustration-concept-illustration-of-people-frequently-asked-vector-id1222300875?k=20&m=1222300875&s=612x612&w=0&h=0fPv8I3VgzXa_Opm2JTj5-JHEVQdJiFHKXROQ0Plwf8=" alt="" />
+                <img className="w-100" src="https://media.istockphoto.com/vectors/vector-illustration-concept-illustration-of-people-frequently-asked-vector-id1222300875?k=20&m=1222300875&s=612x612&w=0&h=0fPv8I3VgzXa_Opm2JTj5-JHEVQdJiFHKXROQ0Plwf8=" alt="" />
             </div>
 
         </div>

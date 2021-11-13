@@ -3,16 +3,17 @@ import  { useEffect, useState } from 'react';
 const useProducts = () => {
 
     
-    const [products, setProducts] = useState()
+    const [myProducts, setMyProducts] = useState([])
+  
 
     useEffect(()=> {
         fetch('http://localhost:5000/products')
         .then(res=>res.json())
-        .then(data=>setProducts(data))
+        .then(data=>setMyProducts(data))
     },[])
 
     return [
-        products
+        myProducts
     ];
 };
 
