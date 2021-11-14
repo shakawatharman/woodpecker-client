@@ -39,7 +39,7 @@ const Register = () => {
     }
     console.log(websiteUser);
 
-    fetch("http://localhost:5000/users",{
+    fetch("https://woodpecker-a3360.web.app/users",{
       method:"POST",
       headers: {
           "content-type":"application/json"
