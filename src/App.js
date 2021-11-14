@@ -7,14 +7,14 @@ import Register from "./Components/Register/Register";
 import AuthProvider from "./Context/AuthProvider";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import Home from './Pages/Home/Home/Home';
-import Payment from "./Pages/Payment/Payment";
 import NotFound from "./Pages/NotFound/NotFound";
-import AddProduct from "./Pages/AddProduct/AddProduct";
-import AddReview from "./Pages/AddReview/AddReview";
 import Products from "./Pages/Products/Products";
 import AllProducts from "./Pages/AllProducts/AllProducts";
 import PurchaseForm from "./Pages/PurchaseForm/PurchaseForm";
 import SingleProduct from "./Pages/SingleProduct/SingleProduct";
+import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
+import Payment from "./Pages/Dashboard/Payment/Payment";
+import AddReview from "./Pages/Dashboard/AddReview/AddReview";
 
 function App() {
   return (

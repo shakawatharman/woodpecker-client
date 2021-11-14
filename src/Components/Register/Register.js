@@ -35,7 +35,8 @@ const Register = () => {
 
     const websiteUser = {
       name : loginData.name,
-      email : loginData.email
+      email : loginData.email,
+      admin: false
     }
     console.log(websiteUser);
 

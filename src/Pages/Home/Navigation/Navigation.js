@@ -34,30 +34,7 @@ const Navigation = () => {
                 >
                   Dashboard
                 </Nav.Link>
-                <Nav.Link as={Link} className="text-dark fw-bold" to="/payment">
-                  Payment
-                </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  className="text-dark fw-bold"
-                  to="/addproduct"
-                >
-                  Add product
-                </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  className="text-dark fw-bold"
-                  to="/addreview"
-                >
-                  Add Review
-                </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  className="text-dark fw-bold"
-                  to="/myorders"
-                >
-                  My Orders
-                </Nav.Link>
+               
 
                 <Button
                   onClick={logOut}

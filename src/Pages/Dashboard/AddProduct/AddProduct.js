@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import SpecialButton from '../../Components/SpecialButton/SpecialButton';
+import SpecialButton from '../../../Components/SpecialButton/SpecialButton';
 import './AddProduct.css';
 
 const AddProduct = () => {

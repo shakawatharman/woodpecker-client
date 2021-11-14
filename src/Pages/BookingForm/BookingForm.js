@@ -68,7 +68,7 @@ const BookingForm = ({productId}) => {
                 </div>
                 <div className="mb-3">
 
-                    <SpecialButton type="submit">Buy Now</SpecialButton>
+                    <SpecialButton type="submit">Place Order</SpecialButton>
                     
                     
                 </div>

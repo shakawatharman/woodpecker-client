@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
-import SpecialButton from "../../Components/SpecialButton/SpecialButton";
-import useAuth from "../../Hooks/useAuth";
-import Footer from "../Home/Footer/Footer";
-import Navigation from "../Home/Navigation/Navigation";
+import SpecialButton from "../../../Components/SpecialButton/SpecialButton";
+import useAuth from "../../../Hooks/useAuth";
 
 const AddReview = () => {
   const { user } = useAuth();
@@ -48,7 +46,7 @@ const AddReview = () => {
 
   return (
     <>
-      <Navigation></Navigation>
+     
       <div className="container row my-5">
         <div className="col-md-6">
           <form className="event-form" action="#">
@@ -115,7 +113,7 @@ const AddReview = () => {
         </div>
       </div>
 
-      <Footer></Footer>
+      
     </>
   );
 };
