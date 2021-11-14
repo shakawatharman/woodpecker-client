@@ -6,7 +6,6 @@ const Products = () => {
 
     const [myProducts] = useProducts();
    
-
     return (
         <div className="container">
             <h2 className="my-5 text-center text-uppercase">Select Your Product</h2>

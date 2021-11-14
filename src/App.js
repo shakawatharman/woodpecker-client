@@ -14,6 +14,7 @@ import AddReview from "./Pages/AddReview/AddReview";
 import Products from "./Pages/Products/Products";
 import AllProducts from "./Pages/AllProducts/AllProducts";
 import PurchaseForm from "./Pages/PurchaseForm/PurchaseForm";
+import SingleProduct from "./Pages/SingleProduct/SingleProduct";
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
         </PrivateRoute>
         <PrivateRoute path="/payment">
         <Payment></Payment>
+        </PrivateRoute>
+        <PrivateRoute path="/buyingProduct/:productID">
+        <SingleProduct></SingleProduct>
         </PrivateRoute>
         <PrivateRoute path="/purchaseform">
         <PurchaseForm></PurchaseForm>

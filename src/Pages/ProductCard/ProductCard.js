@@ -1,11 +1,18 @@
 import React from 'react';
+import { useHistory } from "react-router";
 import { Card, CardGroup } from 'react-bootstrap';
 import SpecialButton from '../../Components/SpecialButton/SpecialButton';
 import './ProductCard.css';
 
 const ProductCard = ({product}) => {
 
-    const { title, desc, img, price } = product;
+    const history = useHistory();
+
+    const { title, desc, img, price, _id } = product;
+
+    const handleProductDetails = ()=> {
+        history.push(`/buyingProduct/${_id}`);
+    };
 
     return (
         <>
@@ -21,7 +28,7 @@ const ProductCard = ({product}) => {
 
                             <Card.Text>{desc.split('').slice(0,100).toString().replace(/,/g,'')}</Card.Text>
                             <h2>${price}</h2>
-                            <SpecialButton to="/purchaseform" className="w-75">Buy Now</SpecialButton>
+                            <SpecialButton onClick={handleProductDetails} className="w-75">Buy Now</SpecialButton>
                         </Card.Body>
                     </Card>
                 </CardGroup>
