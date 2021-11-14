@@ -30,7 +30,7 @@ const AddReview = () => {
     };
     
 
-    fetch("http://localhost:5000/reviews",{
+    fetch("https://secure-shore-57866.herokuapp.com/reviews",{
       method: "POST",
       headers: {
         "content-type": "application/json"

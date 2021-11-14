@@ -25,11 +25,13 @@ const Login = () => {
       const newLoginData = {...loginData};
       newLoginData[field] = value;
       setLoginData(newLoginData)
-      // console.log(loginData);
+      console.log(loginData);
   }
   const handleLoginSubmit = (e) => {
     loginUser(loginData.email, loginData.password, location, history);
     e.preventDefault();
+
+   
  }
 
     return (
@@ -41,7 +43,7 @@ const Login = () => {
     
             <div className="col-md-6 col-sm-12 shadow p-3">
               <Form onSubmit={handleLoginSubmit} className="my-5">
-                {/* <h2 className="mb-5 text-primary text-center">Log<span className="bg-primary text-white">in</span></h2> */}
+              
                 <div>
                     <img className="w-25 mb-5" src="https://woodpeckerbd.com/wp-content/uploads/2021/09/Woodpecker-logo-wc-1.png" alt="" />
                 </div>
@@ -50,7 +52,7 @@ const Login = () => {
                 </div>
                
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  {/* <Form.Label>Email address</Form.Label> */}
+     
                   <Form.Control
                     name="email"
                     onChange={handleOnChange}
@@ -61,7 +63,7 @@ const Login = () => {
                 </Form.Group>
     
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                  {/* <Form.Label>Password</Form.Label> */}
+            
                   <Form.Control
                     name="password"
                     onChange={handleOnChange}
@@ -75,9 +77,7 @@ const Login = () => {
                 <div className="text-center mt-3">
                   {/* <p className="text-danger">{error}</p> */}
                   <SpecialButton type="submit">Login</SpecialButton>
-                  {/* <Button variant="primary" type="submit" size="lg">
-                    Login
-                  </Button> */}
+                 
                 </div>
 
                 <div className="mt-3 text-center">

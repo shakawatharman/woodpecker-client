@@ -24,7 +24,6 @@ const Navigation = () => {
             <Nav.Link as={Link} className="text-dark fw-bold" to="/allproducts">
               Explore
             </Nav.Link>
-          
 
             {user?.email ? (
               <>
@@ -35,11 +34,7 @@ const Navigation = () => {
                 >
                   Dashboard
                 </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  className="text-dark fw-bold"
-                  to="/payment"
-                >
+                <Nav.Link as={Link} className="text-dark fw-bold" to="/payment">
                   Payment
                 </Nav.Link>
                 <Nav.Link
@@ -66,11 +61,14 @@ const Navigation = () => {
 
                 <Button
                   onClick={logOut}
-                  className="text-danger fw-bold"
+                  className="text-danger fw-bold me-2"
                   variant="light"
                 >
                   Logout
                 </Button>
+                <Nav.Link className="text-primary border-bottom">
+                  User: {user.displayName}
+                </Nav.Link>
               </>
             ) : (
               <Nav.Link

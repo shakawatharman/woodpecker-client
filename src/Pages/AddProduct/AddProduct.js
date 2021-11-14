@@ -19,9 +19,9 @@ const AddProduct = () => {
        const product = {
             title,desc,img,price
         }
-        console.log(product)
+        console.log(product);
 
-        fetch("http://localhost:5000/products",{
+        fetch("https://secure-shore-57866.herokuapp.com/products",{
             method:"POST",
             headers: {
                 "content-type":"application/json"

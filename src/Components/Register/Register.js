@@ -32,6 +32,28 @@ const Register = () => {
     }
     registerUser(loginData.email, loginData.password, loginData.name, history);
     e.preventDefault();
+
+    const websiteUser = {
+      name : loginData.name,
+      email : loginData.email
+    }
+    console.log(websiteUser);
+
+    fetch("http://localhost:5000/users",{
+      method:"POST",
+      headers: {
+          "content-type":"application/json"
+      },
+      body:JSON.stringify(websiteUser)
+  })
+  .then(res=>res.json())
+  .then(data=>{
+      if(data.insertedId){
+          
+          e.target.reset();
+      }
+  })
+
 }
 
 

@@ -21,7 +21,7 @@ const ProductCard = ({product}) => {
 
                             <Card.Text>{desc.split('').slice(0,100).toString().replace(/,/g,'')}</Card.Text>
                             <h2>${price}</h2>
-                            <SpecialButton className="w-75">Buy Now</SpecialButton>
+                            <SpecialButton to="/purchaseform" className="w-75">Buy Now</SpecialButton>
                         </Card.Body>
                     </Card>
                 </CardGroup>

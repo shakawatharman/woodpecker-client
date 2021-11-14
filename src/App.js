@@ -48,7 +48,6 @@ function App() {
         <PrivateRoute path="/payment">
         <Payment></Payment>
         </PrivateRoute>
-        
         <PrivateRoute path="/purchaseform">
         <PurchaseForm></PurchaseForm>
         </PrivateRoute>

@@ -54,17 +54,6 @@ setIsLoading(true)
      
 }
 
-// const signInWithGoogle = (location, history) => {
-//   setIsLoading(true);
-//   signInWithPopup(auth, googleProvider)
-//       .then((result) => {
-//           // const user = result.user;
-//           setAuthError('');
-//       }).catch((error) => {
-//           setAuthError(error.message);
-//       }).finally(() => setIsLoading(false));
-// }
-
 
   useEffect(() => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
