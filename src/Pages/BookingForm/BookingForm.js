@@ -29,7 +29,7 @@ const BookingForm = ({productId}) => {
 
         console.log(order)
 
-        fetch("https://woodpecker-a3360.web.app/orders",{
+        fetch("https://secure-shore-57866.herokuapp.com/orders",{
             method:"POST",
             headers: {
                 "content-type":"application/json"

@@ -10,7 +10,7 @@ function ManageOrders() {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`https://woodpecker-a3360.web.app/orders`)
+    fetch(`https://secure-shore-57866.herokuapp.com/orders`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user]);
@@ -21,7 +21,7 @@ function ManageOrders() {
 
   // const status = "apporved";
   const handleUpdate = (id) => {
-    fetch(`https://woodpecker-a3360.web.app/updateStatus/${id}`, {
+    fetch(`https://secure-shore-57866.herokuapp.com/updateStatus/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ status }),

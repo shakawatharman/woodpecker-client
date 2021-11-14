@@ -40,7 +40,7 @@ const Register = () => {
     }
     console.log(websiteUser);
 
-    fetch("https://woodpecker-a3360.web.app/users",{
+    fetch("https://secure-shore-57866.herokuapp.com/users",{
       method:"POST",
       headers: {
           "content-type":"application/json"

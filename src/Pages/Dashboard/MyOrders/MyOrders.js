@@ -10,7 +10,7 @@ function MyOrders() {
 const handleDelete = (id) => {
   const proceed = window.confirm("Are you sure, you want to delete?");
   if (proceed) {
-    fetch(`https://woodpecker-a3360.web.app/deleteOrder/${id}`, {
+    fetch(`https://secure-shore-57866.herokuapp.com/deleteOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -24,7 +24,7 @@ const handleDelete = (id) => {
   }
 };
   useEffect(() => {
-    fetch(`https://woodpecker-a3360.web.app/myOrders/${user?.email}`)
+    fetch(`https://secure-shore-57866.herokuapp.com/myOrders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user]);
