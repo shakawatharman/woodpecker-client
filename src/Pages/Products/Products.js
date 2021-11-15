@@ -1,4 +1,5 @@
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
 import useAuth from '../../Hooks/useAuth';
 import useProducts from '../../Hooks/useProducts';
 import ProductCard from '../ProductCard/ProductCard';
@@ -13,7 +14,7 @@ const Products = () => {
         <div className="container">
             <h2 className="my-5 text-center text-uppercase">Select Your Product</h2>
 
-            {isLoading && <p>product is loading</p>}
+            {isLoading && <Spinner animation="border" variant="warning" />}
 
             <div className="row">
                 {
