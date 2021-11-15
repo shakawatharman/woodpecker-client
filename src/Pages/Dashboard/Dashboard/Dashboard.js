@@ -19,7 +19,8 @@ import Payment from "../Payment/Payment";
 import AddProduct from "../AddProduct/AddProduct";
 import MyOrders from "../MyOrders/MyOrders";
 import ManageOrders from "../ManageOrders/ManageOrders";
-
+import AllUsers from "../../../Components/AllUsers/AllUsers";
+import ManageProducts from "../../../Components/ManageProducts/ManageProducts";
 
 const drawerWidth = 200;
 
@@ -39,45 +40,45 @@ function Dashboard(props) {
       <Toolbar />
       <Divider />
       <List className="px-1">
+        <Link to="/home">
+          <button className="btn sidebar__btn w-100">Home</button>
+        </Link>
+
         <Link exact to={`${url}`}>
           <button className="btn sidebar__btn w-100">DashBoard</button>
         </Link>
 
-       
-         
-        
-         {!admin && (
-           <>
-               <Link to={`${url}/addreview`}>
-          <button className="btn sidebar__btn w-100">Add a Review</button>
-        </Link>
+        {!admin && (
+          <>
+            <Link to={`${url}/addreview`}>
+              <button className="btn sidebar__btn w-100">Add a Review</button>
+            </Link>
 
-        <Link to={`${url}/payment`}>
-          <button className="btn sidebar__btn w-100">Payment</button>
-        </Link>
-           </>
-         )}
+            <Link to={`${url}/payment`}>
+              <button className="btn sidebar__btn w-100">Payment</button>
+            </Link>
+          </>
+        )}
 
         {admin && (
           <>
-           
-
+            <Link to={`${url}/allproducts`}>
+              <button className="btn sidebar__btn w-100">All Products</button>
+            </Link>
             <Link to={`${url}/addproduct`}>
               <button className="btn sidebar__btn w-100">Add Product</button>
             </Link>
             <Link to={`${url}/manageProducts`}>
-              <button className="btn sidebar__btn w-100">
-                Manage Products
-              </button>
+              <button className="btn sidebar__btn w-100">Manage Orders</button>
             </Link>
-            
-            
-           
+            <Link to={`${url}/allusers`}>
+              <button className="btn sidebar__btn w-100">Make Admin</button>
+            </Link>
           </>
         )}
         <Link onClick={logOut} to={`${url}`}>
-              <button className="btn sidebar__btn w-100">Logout</button>
-            </Link>
+          <button className="btn sidebar__btn w-100">Logout</button>
+        </Link>
       </List>
     </div>
   );
@@ -108,7 +109,11 @@ function Dashboard(props) {
           <Typography variant="h6" noWrap component="div">
             Dashboard
           </Typography>
-
+          <button className="btn btn-outline-dark text-white ms-auto">
+          <Typography variant="h6" noWrap component="div">
+          User: {user.displayName}
+          </Typography>
+          </button>
           
         </Toolbar>
       </AppBar>
@@ -162,14 +167,19 @@ function Dashboard(props) {
         <Switch>
           <Route exact path={path}>
             <h1>Welcome to Dashboard</h1>
-          {admin && <ManageOrders></ManageOrders> }
+            {admin && <ManageOrders></ManageOrders>}
 
-           {!admin &&  <MyOrders></MyOrders> }
-          
+            {!admin && <MyOrders></MyOrders>}
+          </Route>
 
+          <Route path={`${path}/allproducts`}>
+            <ManageProducts />
           </Route>
           <Route path={`${path}/addreview`}>
             <AddReview />
+          </Route>
+          <Route path={`${path}/allusers`}>
+            <AllUsers />
           </Route>
 
           <Route path={`${path}/payment`}>

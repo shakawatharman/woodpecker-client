@@ -1,58 +1,57 @@
 import React, { useEffect, useState } from "react";
 import { Badge, Table } from "react-bootstrap";
-import useAuth from "../../../Hooks/useAuth";
+import useAuth from "../../Hooks/useAuth";
 
-function MyOrders() {
-  const [orders, setOrders] = useState([]);
+function ManageProducts() {
+  const [products, setProducts] = useState([]);
   const { user } = useAuth();
 //   console.log(orders);
 
 const handleDelete = (id) => {
   const proceed = window.confirm("Are you sure, you want to delete?");
   if (proceed) {
-    fetch(`https://secure-shore-57866.herokuapp.com/deleteOrder/${id}`, {
+    fetch(`https://secure-shore-57866.herokuapp.com/deleteProduct/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {
           alert("deleted successfully");
-          const remainingOrders = orders.filter((pd) => pd._id !== id);
-          setOrders(remainingOrders);
+          const remainingProducts = products.filter((pd) => pd._id !== id);
+          setProducts(remainingProducts);
         }
       });
   }
 };
   useEffect(() => {
-    fetch(`https://secure-shore-57866.herokuapp.com/myOrders/${user?.email}`)
+    fetch("https://secure-shore-57866.herokuapp.com/products")
       .then((res) => res.json())
-      .then((data) => setOrders(data));
+      .then((data) => setProducts(data));
   }, [user]);
 
   return (
     <Table striped bordered hover size="sm">
       <thead>
         <tr>
-          <th>My Name</th>
+         
           <th>Product Name</th>
           <th>Price</th>
-          <th>Status</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        {orders.map((order) => (
-          <tr key={order._id}>
-            <td>{order.name}</td>
-            <td>{order.product}</td>
-            <td>{order.price}</td>
-            <td>
-              <Badge className="badge" pill bg="warning" text="dark">
-                {order.status}
+        {products.map((product) => (
+          <tr key={product._id}>
+            
+            <td>{product.title}</td>
+            <td>{product.price}</td>
+            {/* <td>
+              <Badge pill bg="warning" text="dark">
+                {product.status}
               </Badge>{" "}
-            </td>
+            </td> */}
             <td>
-              <Badge className="badge" onClick={() => handleDelete(order?._id)} pill bg="danger" text="white">
+              <Badge className="badge" onClick={() => handleDelete(product?._id)} pill bg="danger" text="white">
                DELETE
               </Badge>{" "}
             </td>
@@ -63,4 +62,4 @@ const handleDelete = (id) => {
   );
 }
 
-export default MyOrders;
+export default ManageProducts;
