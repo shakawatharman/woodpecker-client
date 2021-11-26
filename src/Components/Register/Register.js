@@ -62,7 +62,7 @@ const Register = () => {
         <div className="container p-5">
           <div className="row justify-content-center">
             <div className="col-md-6">
-              <img className='w-100' src="https://media.istockphoto.com/vectors/carpenter-with-circular-saw-working-in-workshop-worker-carpentry-vector-id1273822347?b=1&k=20&m=1273822347&s=170667a&w=0&h=oDnX24egsYaqZYglLNiLemRvD6GZcDxAR4kUbaA7D1A=" alt="" />
+              <img className='w-100' src="https://i.ibb.co/Y33k0LC/Carpenter-Character-with-Circular-Saw-Working-in-Workshop-Worker-Carpentry-Woodwork-Joiner-Man-Sawin.jpg" alt="" />
             </div>
     
             <div className="col-md-6 col-sm-12 shadow p-3">
@@ -71,7 +71,7 @@ const Register = () => {
               <Form onSubmit={handleLoginSubmit} className="my-5">
                 
                 <div>
-                    <img className="w-25 mb-5" src="https://woodpeckerbd.com/wp-content/uploads/2021/09/Woodpecker-logo-wc-1.png" alt="" />
+                    <img className="w-25 mb-5" src="https://i.ibb.co/DrpMtTN/Woodpecker-logo-wc-1.png" alt="" />
                 </div>
                 <div className="text-center mb-3">
                  

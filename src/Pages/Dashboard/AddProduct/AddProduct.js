@@ -41,7 +41,7 @@ const AddProduct = () => {
         <>
            <div className="container row my-5">
                 <div className="col-md-4">
-                <img className="w-100" src="https://t3.ftcdn.net/jpg/01/52/72/80/360_F_152728021_uUCcnhwVt8F2uy4lcC5llRa1U6bbP3KA.jpg" alt="" />
+                <img className="w-100" src="https://i.ibb.co/yR8F6Tt/360-F-152728021-u-UCcnhw-Vt8-F2uy4lc-C5ll-Ra1-U6bb-P3-KA.jpg" alt="" />
                 </div>
                
                 <div className="col-md-8 my-5">

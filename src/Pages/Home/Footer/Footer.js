@@ -12,7 +12,7 @@ const Footer = () => {
 				<div className="col-md-5 mb-4">
 					<h3 className="footer-title"></h3>
 					<div className="footer-logo mb-4  text-start">
-						<img className="img-fluid" src="https://woodpeckerbd.com/wp-content/uploads/2021/09/Woodpecker-logo-wc-1.png" alt="" />
+						<img className="img-fluid" src="https://i.ibb.co/DrpMtTN/Woodpecker-logo-wc-1.png" alt="" />
 					</div>
 					<div className="footer-meta  text-start">
 						<p>We are offering you the best service.<br /> Don't feel embarrass to contact us. <br /> We will cordially deal with you.</p>
